@@ -1,0 +1,193 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: 1.5;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+body{
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1.5;
+  background: hsl(225, 100%, 94%);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  @media (min-width:375px) { 
+      background-image: url(./images/pattern-background-desktop.svg);
+    }
+  }
+
+
+
+.container {
+  
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; 
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas: 
+  '. . .'
+  '. card .'
+  '. fot .';
+  }
+   
+.fot{grid-area: fot;}
+
+.image{
+  border-radius: 1rem  1rem  0rem 0rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card {  
+  grid-area: card;
+    background: white; 
+    padding-bottom: 1rem ;
+    border-radius:1rem;
+    width: 22.188rem;
+    
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: min-content auto; 
+  gap: 1rem 0rem; 
+  grid-template-areas: 
+    "picture"
+    "heading"
+    "text"
+    "price"
+    "btn_proceed"
+    "btn_cancel"; 
+  }
+  
+  .picture { grid-area: picture; 
+   
+    display: grid;
+    justify-items: center;
+      
+}
+  
+  .heading { grid-area: heading;
+    justify-self: center;
+  
+}
+  
+.text { grid-area: text;
+    justify-self: center;
+    text-align: center;
+    margin: 0rem 1rem;
+    color: hsl(224, 23%, 55%);
+    font-size: 1rem;
+}
+  
+
+.price {
+  background-color: hsl(225, 100%, 98%);
+  padding: 1rem 0rem;
+  margin-inline: 1rem;
+  border-radius: 1rem;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0rem 0rem; 
+  grid-template-areas: 
+       "price-icon price-annual price-change"; 
+  grid-area: price; 
+  align-self: center;
+   
+}
+
+.price-icon { grid-area: price-icon ; 
+  
+  justify-self: center;
+  align-items: center; 
+ 
+}
+
+.price-annual { grid-area: price-annual;
+  justify-self: left;
+  align-items: center;
+}
+
+.price-change{ grid-area: price-change; 
+
+  display: grid; 
+  justify-content: center; 
+  align-items: center; 
+ 
+}
+
+ 
+  .btn_proceed { grid-area: btn_proceed;
+    justify-self: center;
+ 
+}
+
+.btn_cancel { grid-area: btn_cancel; 
+  justify-self: center;
+}
+
+
+.price-change-text:hover{
+  color: hsl(245, 75%, 67%);
+  text-decoration: none;
+  font-weight: 700;
+  }
+  
+
+.heading-title{
+  color:hsl(223, 47%, 23%);
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.annual-price{
+ justify-self: center;
+ color: hsl(224, 23%, 55%);
+  }
+
+.annual-text{
+font-weight: 900;
+color:hsl(223, 47%, 23%);
+
+}
+
+.button1{
+  text-decoration: none;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    padding: 0.7rem 5rem;
+    border-radius: 0.7rem;
+    border: none;
+    box-shadow: 0 0.5rem 0.5rem 0 hsl(246, 67%, 82%);
+    font-weight: 700;
+   display: grid;
+}
+
+.button1:hover{
+ background-color: hsl(245, 75%, 67%);
+  
+}
+  
+
+
+.cancel-order{
+  display: grid;
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+  font-weight: 900;
+  padding: 0.7rem 7rem;
+  border-radius: 0.7rem;
+  background-color:hsl(225, 100%, 100%);
+
+}
+
+.cancel-order:hover{
+  color:hsl(223, 47%, 23%);
+  text-decoration: none;
+  }
